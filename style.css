@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Major Mono Display', monospace;
+}
+
+#site-content {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#animation-container {
+  max-width: 375px;
+  max-height: 450px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.anim-frame {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+
+.anim-frame > h3 {
+  text-align: center;
+  position: absolute;
+  top: 1em;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.anim-chev {
+  position: absolute;
+  top: calc(50% - 1rem);
+  z-index: 100;
+  width: 2rem;
+  height: 2rem;
+  background: rgba(255,255,255, .2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 300ms;
+}
+
+.anim-chev:hover {
+  transform: translateY(-5px);
+}
+
+.anim-chev__right {
+  right: 0;
+}
+
+.anim-chev__left {
+  left: 0;
+}
+
+.center-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* SOCIAL ICONS */
+
+.si {
+  margin-right: 4px;
+  height: 30px;
+  width: 30px;
+  background-repeat: repeat;
+  border: 2px solid black;
+  transition: all 100ms ease;
+  background-size: 26px 26px;
+}
+
+.si:last-child {
+  margin-right: 0px;
+}
+.si {
+  margin-right: 4px;
+  height: 30px;
+  width: 30px;
+  background-repeat: repeat;
+  border: 2px solid black;
+  transition: all 100ms ease;
+  background-size: 26px 26px;
+}
+
+.si:hover {
+  background-size: 7px 7px;
+}
+
+.si__github {
+  background-image: url('./icons/github-brands.svg');
+}
+
+.si__mailchimp {
+  background-image: url('./icons/mailchimp-brands.svg');
+}
+
+.si__fb {
+  background-image: url('./icons/facebook-f-brands.svg');
+}
+
+.si__insta {
+  background-image: url('./icons/instagram-brands.svg');
+}
+
+.si__tw {
+  background-image: url('./icons/twitter-brands.svg');
+}
+
+/* SNACKBAR */
+.snackbar {
+  position: absolute;
+  bottom: -9999px;
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+  border: 2px solid #000;
+}
+
+/* LOADING SPINNER  */
+.loading-spinner {
+  width: 75px;
+  height: 75px;
+  border: 5px solid rgba(0, 0, 0, 0.2);
+  border-top: 5px solid black;
+  border-radius: 50%; 
+  transform: rotate(0deg);
+}
+
+/* LOGIN FORM */
+.login-form {
+  border: 2px solid #000;
+  border-radius: 3px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form-input {
+  margin-bottom: 1em;
+}
